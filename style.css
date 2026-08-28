@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f3ef;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #202020;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 5px;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.introducao {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.introducao h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.conteudo h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.imagem {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    background: #ddd;
+}
+
+.card h3 {
+    padding: 20px 20px 5px;
+}
+
+.card p {
+    padding: 0 20px 25px;
+    color: #555;
+}
+
+.quiz {
+    margin-top: 60px;
+    padding: 40px;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.quiz h2 {
+    margin-bottom: 10px;
+}
+
+.quiz button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 25px;
+    background: #202020;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+}
