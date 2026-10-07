@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>México — Cultura, Religião e Identidade</title>
+    <title>Museu Digital do México</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,59 +13,255 @@
 <body>
 
     <header>
-        <h1>MÉXICO</h1>
-        <p>Cultura • Religião • Identidade</p>
+
+        <div class="topo">
+
+            <div class="logo">
+                <span>🇲🇽</span>
+                <div>
+                    <h1>MÉXICO</h1>
+                    <p>Cultura • Religião • Identidade</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#cultura">Cultura</a>
+                <a href="#religiao">Religião</a>
+                <a href="#povos">Povos Indígenas</a>
+                <a href="#quiz">Quiz</a>
+            </nav>
+
+        </div>
+
     </header>
+
 
     <main>
 
-        <section class="introducao">
-            <h2>Conheça o México</h2>
+        <section id="inicio" class="hero">
 
-            <p>
-                Explore a cultura, as tradições, a religiosidade
-                e os elementos que fazem parte da identidade mexicana.
-            </p>
-        </section>
+            <div class="hero-texto">
 
-        <section class="conteudo">
+                <p class="mini-titulo">MUSEU DIGITAL</p>
 
-            <h2>Explore</h2>
+                <h2>
+                    Conheça o México
+                </h2>
 
-            <div class="cards">
+                <p>
+                    Explore a cultura, as tradições, a religiosidade
+                    e os elementos que fazem parte da identidade mexicana.
+                </p>
 
-                <article class="card">
-                    <div class="imagem">💀</div>
-                    <h3>Día de los Muertos</h3>
-                    <p>
-                        Conheça uma das celebrações mais marcantes
-                        da cultura mexicana.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <div class="imagem">⛪</div>
-                    <h3>Religião</h3>
-                    <p>
-                        Descubra a influência da religiosidade
-                        na sociedade mexicana.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <div class="imagem">🪶</div>
-                    <h3>Povos indígenas</h3>
-                    <p>
-                        Conheça alguns dos povos que contribuíram
-                        para a formação cultural do México.
-                    </p>
-                </article>
+                <a href="#explore" class="botao">
+                    Explorar o museu
+                </a>
 
             </div>
 
         </section>
 
-        <section class="quiz">
+
+        <section id="explore" class="secao">
+
+            <div class="titulo-secao">
+                <p>EXPLORE</p>
+                <h2>Conheça a cultura mexicana</h2>
+            </div>
+
+
+            <div class="cards">
+
+
+                <article class="card" onclick="mostrarConteudo('mortos')">
+
+                    <div class="imagem imagem-mortos">
+                        💀
+                    </div>
+
+                    <div class="card-conteudo">
+
+                        <p class="categoria">TRADIÇÃO</p>
+
+                        <h3>Día de los Muertos</h3>
+
+                        <p>
+                            Conheça uma das celebrações mais marcantes
+                            da cultura mexicana.
+                        </p>
+
+                        <span class="link-card">
+                            Saiba mais →
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card" onclick="mostrarConteudo('religiao')">
+
+                    <div class="imagem imagem-religiao">
+                        ⛪
+                    </div>
+
+                    <div class="card-conteudo">
+
+                        <p class="categoria">RELIGIÃO</p>
+
+                        <h3>Religião</h3>
+
+                        <p>
+                            Descubra a influência da religiosidade
+                            na sociedade mexicana.
+                        </p>
+
+                        <span class="link-card">
+                            Saiba mais →
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card" onclick="mostrarConteudo('povos')">
+
+                    <div class="imagem imagem-povos">
+                        🪶
+                    </div>
+
+                    <div class="card-conteudo">
+
+                        <p class="categoria">CULTURA</p>
+
+                        <h3>Povos indígenas</h3>
+
+                        <p>
+                            Conheça alguns dos povos que contribuíram
+                            para a formação cultural do México.
+                        </p>
+
+                        <span class="link-card">
+                            Saiba mais →
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <section id="cultura" class="conteudo-destaque">
+
+            <div>
+
+                <p class="mini-titulo">CULTURA</p>
+
+                <h2>Uma identidade construída ao longo do tempo</h2>
+
+                <p>
+                    A cultura mexicana é resultado da união de diferentes
+                    povos, tradições, crenças e acontecimentos históricos.
+                    Suas manifestações culturais estão presentes na música,
+                    na arte, na culinária, nas festas e nos costumes.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="religiao" class="secao informacao">
+
+            <div class="titulo-secao">
+
+                <p>RELIGIÃO</p>
+
+                <h2>Religiosidade no México</h2>
+
+            </div>
+
+            <div class="texto-secao">
+
+                <p>
+                    A religião possui importante presença na sociedade
+                    mexicana. O catolicismo foi introduzido durante a
+                    colonização espanhola e passou a fazer parte da
+                    história e da cultura do país.
+                </p>
+
+                <p>
+                    Ao mesmo tempo, diferentes tradições indígenas
+                    permaneceram presentes, contribuindo para a formação
+                    de práticas culturais e religiosas características
+                    do México.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="povos" class="secao informacao">
+
+            <div class="titulo-secao">
+
+                <p>POVOS INDÍGENAS</p>
+
+                <h2>Diversidade cultural</h2>
+
+            </div>
+
+            <div class="texto-secao">
+
+                <p>
+                    O México possui uma grande diversidade de povos
+                    indígenas, cada um com suas próprias tradições,
+                    línguas, costumes e formas de expressão cultural.
+                </p>
+
+                <p>
+                    Essas comunidades possuem papel fundamental na
+                    construção da identidade cultural mexicana e na
+                    preservação de tradições anteriores à colonização.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="destaque-tradicao">
+
+            <div>
+
+                <p class="mini-titulo">TRADIÇÕES MEXICANAS</p>
+
+                <h2>
+                    Cultura, memória e identidade
+                </h2>
+
+                <p>
+                    Festividades, símbolos, músicas, comidas e outras
+                    manifestações culturais ajudam a representar o México
+                    dentro e fora do país.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="quiz" class="quiz">
+
+            <p class="mini-titulo">INTERAÇÃO</p>
+
             <h2>Teste seus conhecimentos</h2>
 
             <p>
@@ -74,15 +271,40 @@
             <button onclick="iniciarQuiz()">
                 Fazer o quiz
             </button>
+
         </section>
+
+
+        <div id="modal" class="modal">
+
+            <div class="modal-conteudo">
+
+                <button class="fechar" onclick="fecharConteudo()">
+                    ×
+                </button>
+
+                <div id="modal-texto"></div>
+
+            </div>
+
+        </div>
+
 
     </main>
 
+
     <footer>
+
         <p>
-            Museu Digital — Cultura e Identidade do México
+            Museu Digital do México
         </p>
+
+        <p>
+            Cultura • Religião • Identidade
+        </p>
+
     </footer>
+
 
     <script src="script.js"></script>
 
