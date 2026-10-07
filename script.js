@@ -1,3 +1,7 @@
+/* =========================
+   QUIZ
+========================= */
+
 const perguntas = [
 
     {
@@ -62,17 +66,24 @@ let perguntaAtual = 0;
 let pontuacao = 0;
 
 
+/* INICIAR QUIZ */
+
 function iniciarQuiz() {
 
     perguntaAtual = 0;
     pontuacao = 0;
 
-    document.getElementById("quiz-resultado").innerHTML = "";
+    const resultado = document.getElementById("quiz-resultado");
+
+    if (resultado) {
+        resultado.innerHTML = "";
+    }
 
     mostrarPergunta();
-
 }
 
+
+/* MOSTRAR PERGUNTA */
 
 function mostrarPergunta() {
 
@@ -84,15 +95,29 @@ function mostrarPergunta() {
     const opcoesElemento =
         document.getElementById("quiz-opcoes");
 
+    const proximoBotao =
+        document.getElementById("proxima-pergunta");
+
+    const resultado =
+        document.getElementById("quiz-resultado");
+
+
     perguntaElemento.innerHTML = `
         <h3>
             ${perguntaAtual + 1}. ${pergunta.pergunta}
         </h3>
     `;
 
+
     opcoesElemento.innerHTML = "";
 
-    pergunta.opcoes.forEach((opcao, indice) => {
+
+    if (resultado) {
+        resultado.innerHTML = "";
+    }
+
+
+    pergunta.opcoes.forEach(function(opcao, indice) {
 
         const botao = document.createElement("button");
 
@@ -100,18 +125,24 @@ function mostrarPergunta() {
 
         botao.classList.add("opcao-quiz");
 
-        botao.onclick = function() {
+
+        botao.addEventListener("click", function() {
+
             responder(indice);
-        };
+
+        });
+
 
         opcoesElemento.appendChild(botao);
 
     });
 
-    document.getElementById("proxima-pergunta").style.display = "none";
 
+    proximoBotao.style.display = "none";
 }
 
+
+/* RESPONDER */
 
 function responder(indice) {
 
@@ -120,10 +151,20 @@ function responder(indice) {
     const botoes =
         document.querySelectorAll(".opcao-quiz");
 
-    botoes.forEach(botao => {
+    const resultado =
+        document.getElementById("quiz-resultado");
+
+
+    /* Impede clicar em várias respostas */
+
+    botoes.forEach(function(botao) {
+
         botao.disabled = true;
+
     });
 
+
+    /* RESPOSTA CERTA */
 
     if (indice === pergunta.resposta) {
 
@@ -131,14 +172,41 @@ function responder(indice) {
 
         botoes[indice].classList.add("correta");
 
-    } else {
+        resultado.innerHTML = `
+            <div class="resultado-resposta resultado-correto">
+                ✓ Você acertou!
+            </div>
+        `;
+
+    }
+
+
+    /* RESPOSTA ERRADA */
+
+    else {
 
         botoes[indice].classList.add("errada");
 
         botoes[pergunta.resposta].classList.add("correta");
 
+
+        resultado.innerHTML = `
+            <div class="resultado-resposta resultado-errado">
+                ✕ Você errou!
+                <br>
+                <span>
+                    A resposta correta é:
+                    <strong>
+                        ${pergunta.opcoes[pergunta.resposta]}
+                    </strong>
+                </span>
+            </div>
+        `;
+
     }
 
+
+    /* MOSTRA BOTÃO PRÓXIMA */
 
     document.getElementById("proxima-pergunta").style.display =
         "inline-block";
@@ -146,15 +214,20 @@ function responder(indice) {
 }
 
 
+/* PRÓXIMA PERGUNTA */
+
 function proximaPergunta() {
 
     perguntaAtual++;
+
 
     if (perguntaAtual < perguntas.length) {
 
         mostrarPergunta();
 
-    } else {
+    }
+
+    else {
 
         mostrarResultado();
 
@@ -163,28 +236,38 @@ function proximaPergunta() {
 }
 
 
+/* RESULTADO FINAL */
+
 function mostrarResultado() {
 
     document.getElementById("quiz-pergunta").innerHTML = "";
 
     document.getElementById("quiz-opcoes").innerHTML = "";
 
-    document.getElementById("proxima-pergunta").style.display = "none";
+    document.getElementById("proxima-pergunta").style.display =
+        "none";
+
 
     document.getElementById("quiz-resultado").innerHTML = `
-        <h3>Quiz concluído!</h3>
 
-        <p>
-            Você acertou
-            <strong>${pontuacao}</strong>
-            de
-            <strong>${perguntas.length}</strong>
-            perguntas.
-        </p>
+        <div class="resultado-final">
 
-        <button onclick="iniciarQuiz()">
-            Fazer novamente
-        </button>
+            <h3>Quiz concluído!</h3>
+
+            <p>
+                Você acertou
+                <strong>${pontuacao}</strong>
+                de
+                <strong>${perguntas.length}</strong>
+                perguntas.
+            </p>
+
+            <button onclick="iniciarQuiz()">
+                Fazer novamente
+            </button>
+
+        </div>
+
     `;
 
 }
@@ -194,16 +277,19 @@ function mostrarResultado() {
    CARDS DO MUSEU
 ========================= */
 
-
 function mostrarConteudo(tipo) {
 
     const modal = document.getElementById("modal");
+
     const texto = document.getElementById("modal-texto");
 
 
     if (tipo === "mortos") {
 
         texto.innerHTML = `
+
+            <p class="categoria">TRADIÇÃO</p>
+
             <h2>Día de los Muertos</h2>
 
             <p>
@@ -214,24 +300,28 @@ function mostrarConteudo(tipo) {
             </p>
 
             <p>
-                A celebração possui influências de tradições indígenas
+                A celebração reúne influências de tradições indígenas
                 e do catolicismo introduzido durante a colonização
                 espanhola.
             </p>
 
             <p>
                 Entre seus elementos estão os altares, flores,
-                alimentos, fotografias e outros objetos relacionados
-                às pessoas homenageadas.
+                alimentos, fotografias e objetos relacionados às
+                pessoas homenageadas.
             </p>
+
         `;
 
     }
 
 
-    if (tipo === "religiao") {
+    else if (tipo === "religiao") {
 
         texto.innerHTML = `
+
+            <p class="categoria">RELIGIÃO</p>
+
             <h2>Religião no México</h2>
 
             <p>
@@ -241,23 +331,27 @@ function mostrarConteudo(tipo) {
             </p>
 
             <p>
-                Ao longo do tempo, elementos de diferentes tradições
-                passaram a coexistir, contribuindo para manifestações
-                religiosas e culturais características do país.
+                Ao longo do tempo, diferentes tradições passaram a
+                coexistir, contribuindo para manifestações religiosas
+                e culturais características do país.
             </p>
 
             <p>
                 A religiosidade também pode ser observada em festas,
                 peregrinações, símbolos, arte e costumes familiares.
             </p>
+
         `;
 
     }
 
 
-    if (tipo === "povos") {
+    else if (tipo === "povos") {
 
         texto.innerHTML = `
+
+            <p class="categoria">CULTURA</p>
+
             <h2>Povos indígenas</h2>
 
             <p>
@@ -277,6 +371,7 @@ function mostrarConteudo(tipo) {
                 culinária, música, língua, religião e nas festividades
                 do país.
             </p>
+
         `;
 
     }
@@ -287,6 +382,8 @@ function mostrarConteudo(tipo) {
 }
 
 
+/* FECHAR CAIXINHA */
+
 function fecharConteudo() {
 
     const modal = document.getElementById("modal");
@@ -295,6 +392,8 @@ function fecharConteudo() {
 
 }
 
+
+/* FECHAR CLICANDO FORA */
 
 window.addEventListener("click", function(event) {
 
