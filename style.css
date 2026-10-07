@@ -631,3 +631,124 @@ footer p + p {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* =========================
+   PÁGINA DE QUIZZES
+========================= */
+
+.pagina-quizzes {
+    max-width: 1150px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+.pagina-quizzes > h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.descricao-quizzes {
+    max-width: 650px;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+
+.cards-quizzes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.quiz-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.quiz-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.14);
+}
+
+
+.quiz-card-imagem {
+    height: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 70px;
+
+    background: #e8dfcf;
+}
+
+
+.quiz-card-conteudo {
+    padding: 25px;
+}
+
+
+.quiz-card-conteudo h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+
+.quiz-card-conteudo p:not(.categoria) {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+.quiz-card-conteudo button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 6px;
+
+    background: #202020;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.quiz-card-conteudo button:hover {
+    opacity: 0.8;
+}
+
+
+@media (max-width: 800px) {
+
+    .pagina-quizzes {
+        padding: 60px 20px;
+    }
+
+    .pagina-quizzes > h2 {
+        font-size: 38px;
+    }
+
+    .cards-quizzes {
+        grid-template-columns: 1fr;
+    }
+
+}
