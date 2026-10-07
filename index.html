@@ -261,22 +261,29 @@
 
     <h2>Teste seus conhecimentos</h2>
 
-    <p class="quiz-intro">
-        Descubra quanto você sabe sobre a cultura,
-        a religião e a identidade mexicana.
+    <p>
+        Você realmente conhece o México?
     </p>
 
-    <div id="quiz-container">
+    <button onclick="iniciarQuiz()" id="botao-iniciar-quiz">
+        Fazer o quiz
+    </button>
+
+
+    <div id="quiz-area">
 
         <div id="quiz-pergunta"></div>
 
         <div id="quiz-opcoes"></div>
 
-        <button id="proxima-pergunta" onclick="proximaPergunta()">
+        <div id="quiz-resultado"></div>
+
+        <button
+            id="proxima-pergunta"
+            onclick="proximaPergunta()"
+        >
             Próxima pergunta
         </button>
-
-        <div id="quiz-resultado"></div>
 
     </div>
 
