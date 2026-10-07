@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #f5f3ef;
@@ -14,40 +18,148 @@ body {
 header {
     background: #202020;
     color: white;
-    text-align: center;
-    padding: 40px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-header h1 {
-    font-size: 42px;
-    letter-spacing: 5px;
-}
-
-header p {
-    margin-top: 8px;
-    font-size: 16px;
-}
-
-main {
-    max-width: 1100px;
+.topo {
+    max-width: 1200px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
 }
 
-.introducao {
-    text-align: center;
-    padding: 50px 20px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.introducao h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
+.logo > span {
+    font-size: 30px;
 }
 
-.conteudo h2 {
-    font-size: 28px;
+.logo h1 {
+    font-size: 25px;
+    letter-spacing: 4px;
+}
+
+.logo p {
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.65;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.25)
+        ),
+        linear-gradient(
+            135deg,
+            #6d1717,
+            #c59b32,
+            #276447
+        );
+
+    color: white;
+}
+
+.hero-texto {
+    max-width: 650px;
+}
+
+.mini-titulo {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    opacity: 0.8;
+}
+
+.hero h2 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1;
     margin-bottom: 25px;
 }
+
+.hero p:not(.mini-titulo) {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    background: white;
+    color: #222;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+/* SEÇÕES */
+
+.secao {
+    max-width: 1150px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+.titulo-secao {
+    margin-bottom: 35px;
+}
+
+.titulo-secao > p {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.titulo-secao h2 {
+    font-size: 38px;
+    line-height: 1.15;
+}
+
+
+/* CARDS */
 
 .cards {
     display: grid;
@@ -57,76 +169,309 @@ main {
 
 .card {
     background: white;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.14);
 }
 
 .imagem {
-    height: 180px;
+    height: 220px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 70px;
-    background: #ddd;
+
+    font-size: 75px;
+}
+
+.imagem-mortos {
+    background: #e6c35c;
+}
+
+.imagem-religiao {
+    background: #d8d1c2;
+}
+
+.imagem-povos {
+    background: #779b78;
+}
+
+.card-conteudo {
+    padding: 25px;
+}
+
+.categoria {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 8px;
 }
 
 .card h3 {
-    padding: 20px 20px 5px;
-}
-
-.card p {
-    padding: 0 20px 25px;
-    color: #555;
-}
-
-.quiz {
-    margin-top: 60px;
-    padding: 40px;
-    background: white;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.quiz h2 {
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
-.quiz button {
+.card p:not(.categoria) {
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.link-card {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* BLOCO DE CULTURA */
+
+.conteudo-destaque {
+    background: #202020;
+    color: white;
+    padding: 100px 10%;
+}
+
+.conteudo-destaque > div {
+    max-width: 800px;
+}
+
+.conteudo-destaque h2 {
+    font-size: 45px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.conteudo-destaque p:not(.mini-titulo) {
+    font-size: 18px;
+    color: #ddd;
+}
+
+
+/* INFORMAÇÕES */
+
+.informacao {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.texto-secao {
+    font-size: 18px;
+}
+
+.texto-secao p + p {
     margin-top: 20px;
-    padding: 12px 25px;
+}
+
+
+/* TRADIÇÕES */
+
+.destaque-tradicao {
+    padding: 100px 10%;
+    background: #e8dfcf;
+}
+
+.destaque-tradicao > div {
+    max-width: 800px;
+}
+
+.destaque-tradicao h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+
+/* QUIZ */
+
+.quiz {
+    max-width: 900px;
+    margin: 90px auto;
+    padding: 70px 30px;
+
+    background: white;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.quiz h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.quiz > p:not(.mini-titulo) {
+    color: #666;
+}
+
+.quiz button {
+    margin-top: 25px;
+
+    padding: 14px 30px;
+
     border: none;
     border-radius: 6px;
-    background: #222;
+
+    background: #202020;
     color: white;
+
     font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+.quiz button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* MODAL */
+
+.modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    z-index: 200;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-conteudo {
+    position: relative;
+
+    width: 100%;
+    max-width: 700px;
+
+    max-height: 85vh;
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 40px;
+}
+
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    border: none;
+    background: none;
+
+    font-size: 32px;
     cursor: pointer;
 }
 
+.modal-conteudo h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.modal-conteudo p {
+    margin-bottom: 15px;
+}
+
+
+/* RODAPÉ */
+
 footer {
-    margin-top: 40px;
-    padding: 25px;
+    padding: 35px 20px;
+
     background: #202020;
+
     color: white;
+
     text-align: center;
 }
 
-@media (max-width: 700px) {
+footer p + p {
+    margin-top: 5px;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+
+        gap: 18px;
+    }
+
+    nav a {
+        white-space: nowrap;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 60px 25px;
+    }
 
     .cards {
         grid-template-columns: 1fr;
     }
 
-    header h1 {
-        font-size: 32px;
+    .informacao {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    main {
-        padding: 25px 15px;
+    .conteudo-destaque h2 {
+        font-size: 36px;
+    }
+
+    .destaque-tradicao h2 {
+        font-size: 38px;
+    }
+
+    .quiz h2 {
+        font-size: 34px;
+    }
+
+    .modal-conteudo {
+        padding: 30px 25px;
     }
 }
