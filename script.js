@@ -73,6 +73,8 @@ function iniciarQuiz() {
     perguntaAtual = 0;
     pontuacao = 0;
 
+    document.getElementById("botao-iniciar-quiz").style.display = "none";
+
     const resultado = document.getElementById("quiz-resultado");
 
     if (resultado) {
