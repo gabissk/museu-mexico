@@ -1,323 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Museu Digital do México</title>
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MIRA — México, História e Cultura. Um museu digital para explorar a identidade mexicana.">
+<title>MIRA — México · História · Cultura</title><link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <header>
-
-        <div class="topo">
-
-            <div class="logo">
-                <span>🇲🇽</span>
-                <div>
-                    <h1>MÉXICO</h1>
-                    <p>Cultura • Religião • Identidade</p>
-                </div>
-            </div>
-
-            <nav>
-                <a href="#inicio">Início</a>
-                <a href="#cultura">Cultura</a>
-                <a href="#religiao">Religião</a>
-                <a href="#povos">Povos Indígenas</a>
-                <a href="#quiz">Quiz</a>
-            </nav>
-
-        </div>
-
-    </header>
-
-
-    <main>
-
-        <section id="inicio" class="hero">
-
-            <div class="hero-texto">
-
-                <p class="mini-titulo">MUSEU DIGITAL</p>
-
-                <h2>
-                    Conheça o México
-                </h2>
-
-                <p>
-                    Explore a cultura, as tradições, a religiosidade
-                    e os elementos que fazem parte da identidade mexicana.
-                </p>
-
-                <a href="#explore" class="botao">
-                    Explorar o museu
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <section id="explore" class="secao">
-
-            <div class="titulo-secao">
-                <p>EXPLORE</p>
-                <h2>Conheça a cultura mexicana</h2>
-            </div>
-
-
-            <div class="cards">
-
-
-                <article class="card" onclick="mostrarConteudo('mortos')">
-
-                    <div class="imagem imagem-mortos">
-                        💀
-                    </div>
-
-                    <div class="card-conteudo">
-
-                        <p class="categoria">TRADIÇÃO</p>
-
-                        <h3>Día de los Muertos</h3>
-
-                        <p>
-                            Conheça uma das celebrações mais marcantes
-                            da cultura mexicana.
-                        </p>
-
-                        <span class="link-card">
-                            Saiba mais →
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="card" onclick="mostrarConteudo('religiao')">
-
-                    <div class="imagem imagem-religiao">
-                        ⛪
-                    </div>
-
-                    <div class="card-conteudo">
-
-                        <p class="categoria">RELIGIÃO</p>
-
-                        <h3>Religião</h3>
-
-                        <p>
-                            Descubra a influência da religiosidade
-                            na sociedade mexicana.
-                        </p>
-
-                        <span class="link-card">
-                            Saiba mais →
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="card" onclick="mostrarConteudo('povos')">
-
-                    <div class="imagem imagem-povos">
-                        🪶
-                    </div>
-
-                    <div class="card-conteudo">
-
-                        <p class="categoria">CULTURA</p>
-
-                        <h3>Povos indígenas</h3>
-
-                        <p>
-                            Conheça alguns dos povos que contribuíram
-                            para a formação cultural do México.
-                        </p>
-
-                        <span class="link-card">
-                            Saiba mais →
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-        <section id="cultura" class="conteudo-destaque">
-
-            <div>
-
-                <p class="mini-titulo">CULTURA</p>
-
-                <h2>Uma identidade construída ao longo do tempo</h2>
-
-                <p>
-                    A cultura mexicana é resultado da união de diferentes
-                    povos, tradições, crenças e acontecimentos históricos.
-                    Suas manifestações culturais estão presentes na música,
-                    na arte, na culinária, nas festas e nos costumes.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <section id="religiao" class="secao informacao">
-
-            <div class="titulo-secao">
-
-                <p>RELIGIÃO</p>
-
-                <h2>Religiosidade no México</h2>
-
-            </div>
-
-            <div class="texto-secao">
-
-                <p>
-                    A religião possui importante presença na sociedade
-                    mexicana. O catolicismo foi introduzido durante a
-                    colonização espanhola e passou a fazer parte da
-                    história e da cultura do país.
-                </p>
-
-                <p>
-                    Ao mesmo tempo, diferentes tradições indígenas
-                    permaneceram presentes, contribuindo para a formação
-                    de práticas culturais e religiosas características
-                    do México.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <section id="povos" class="secao informacao">
-
-            <div class="titulo-secao">
-
-                <p>POVOS INDÍGENAS</p>
-
-                <h2>Diversidade cultural</h2>
-
-            </div>
-
-            <div class="texto-secao">
-
-                <p>
-                    O México possui uma grande diversidade de povos
-                    indígenas, cada um com suas próprias tradições,
-                    línguas, costumes e formas de expressão cultural.
-                </p>
-
-                <p>
-                    Essas comunidades possuem papel fundamental na
-                    construção da identidade cultural mexicana e na
-                    preservação de tradições anteriores à colonização.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <section class="destaque-tradicao">
-
-            <div>
-
-                <p class="mini-titulo">TRADIÇÕES MEXICANAS</p>
-
-                <h2>
-                    Cultura, memória e identidade
-                </h2>
-
-                <p>
-                    Festividades, símbolos, músicas, comidas e outras
-                    manifestações culturais ajudam a representar o México
-                    dentro e fora do país.
-                </p>
-
-            </div>
-        </section>
-
-<section class="entrada-quizzes">
-
-    <div class="entrada-quizzes-texto">
-
-        <p class="mini-titulo">
-            INTERAÇÃO
-        </p>
-
-        <h2>
-            Quer testar o que aprendeu?
-        </h2>
-
-        <p>
-            Explore nossos quizzes e coloque seus conhecimentos
-            sobre a cultura, a religião e a identidade mexicana
-            à prova.
-        </p>
-
-        <a href="quizzes.html" class="botao-quizzes">
-            Conheça os quizzes →
-        </a>
-
+<header class="topo">
+  <a class="marca" href="index.html"><img src="logo-mira.png" alt="" class="marca-simbolo"><span><strong>MIRA</strong><small>México · História · Cultura</small></span></a>
+  <button class="menu-botao" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  <nav class="menu"><a class="ativo" href="index.html">Início</a><a href="categorias.html">Explorar</a><a href="categorias.html#historia">História</a><a href="categorias.html#religiao">Religião</a><a href="quizzes.html">Quiz</a></nav>
+</header>
+<main>
+  <form class="busca" id="form-busca"><span aria-hidden="true">⌕</span><input id="campo-busca" type="search" placeholder="Pesquise sobre o México..." aria-label="Pesquisar no MIRA"><button aria-label="Pesquisar">→</button></form>
+  <section class="hero">
+    <div class="hero-filtro"></div><div class="hero-conteudo"><p class="sobretitulo">UM MUSEU DIGITAL</p><h1>Uma cultura.<br>Milhares de histórias.</h1><p>Explore as tradições, as crenças e as heranças que formam a identidade mexicana.</p><a class="botao botao-ouro" href="categorias.html">Explore o México <span>→</span></a></div>
+  </section>
+  <section class="secao introducao">
+    <p class="sobretitulo">BEM-VINDO AO MIRA</p><h2>Conheça o México para além dos cartões-postais.</h2><p class="texto-intro">Um espaço para descobrir como a história, a religião e as expressões culturais se encontram e continuam transformando o país.</p>
+  </section>
+  <section class="secao">
+    <div class="titulo-linha"><div><p class="sobretitulo">EXPLORE POR TEMA</p><h2>Descubra nossas coleções</h2></div><a class="link-seta" href="categorias.html">Ver todas →</a></div>
+    <div class="grade-categorias">
+      <a class="categoria destaque" href="categorias.html#tradicoes"><span class="numero">01 / TRADIÇÕES</span><h3>Festas e tradições</h3><p>Rituais, celebrações e memórias compartilhadas.</p><span class="seta-card">↗</span></a>
+      <a class="categoria" href="categorias.html#religiao"><span class="numero">02 / CRENÇAS</span><h3>Religião e espiritualidade</h3><p>Encontros entre crenças indígenas e catolicismo.</p><span class="seta-card">↗</span></a>
+      <a class="categoria" href="categorias.html#povos"><span class="numero">03 / ORIGENS</span><h3>Povos indígenas</h3><p>Histórias, línguas e culturas vivas.</p><span class="seta-card">↗</span></a>
+      <a class="categoria" href="categorias.html#arte"><span class="numero">04 / EXPRESSÕES</span><h3>Arte e símbolos</h3><p>Imagens, objetos e símbolos de identidade.</p><span class="seta-card">↗</span></a>
+      <a class="categoria" href="categorias.html#musica"><span class="numero">05 / SONS E MOVIMENTO</span><h3>Música e dança</h3><p>Manifestações populares de diferentes regiões.</p><span class="seta-card">↗</span></a>
+      <a class="categoria" href="categorias.html#gastronomia"><span class="numero">06 / SABORES</span><h3>Gastronomia</h3><p>Alimentos, técnicas e tradições à mesa.</p><span class="seta-card">↗</span></a>
     </div>
-
-    <div class="entrada-quizzes-simbolo">
-        🧠
-    </div>
-
-</section>
-
-
-        <div id="modal" class="modal">
-
-            <div class="modal-conteudo">
-
-                <button class="fechar" onclick="fecharConteudo()">
-                    ×
-                </button>
-
-                <div id="modal-texto"></div>
-
-            </div>
-
-        </div>
-
-
-    </main>
-
-
-    <footer>
-
-        <p>
-            Museu Digital do México
-        </p>
-
-        <p>
-            Cultura • Religião • Identidade
-        </p>
-
-    </footer>
-
-
-    <script src="script.js"></script>
-
-</body>
-</html>
+  </section>
+  <section class="chamada-quiz"><div><p class="sobretitulo">APRENDA INTERAGINDO</p><h2>Quanto você sabe sobre o México?</h2><p>Teste seus conhecimentos com quizzes temáticos do nosso museu.</p><a class="botao botao-claro" href="quizzes.html">Conheça os quizzes →</a></div><div class="quiz-simbolo">✳</div></section>
+  <section class="secao sobre"><p class="sobretitulo">NOSSA PROPOSTA</p><h2>História e cultura em diálogo.</h2><p>O MIRA é um museu digital educativo dedicado a explorar a relação entre religião, cultura e identidade mexicana, valorizando a diversidade de experiências que formam o país.</p></section>
+</main>
+<footer><a class="marca marca-rodape" href="index.html"><img src="logo-mira.png" alt=""><span><strong>MIRA</strong><small>México · História · Cultura</small></span></a><p>Um museu digital sobre história, cultura e identidade mexicana.</p><a href="fontes.html">Fontes e referências</a><small>© MIRA · Projeto educativo</small></footer>
+<script src="script.js"></script>
+</body></html>
