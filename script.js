@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded',()=>{
  const menuBtn=document.querySelector('.menu-botao'), menu=document.querySelector('.menu');
+ document.querySelectorAll('a[href]').forEach(link=>{const href=link.getAttribute('href');if(href && !href.startsWith('#') && !/^(https?:|mailto:|tel:|javascript:)/i.test(href)){link.setAttribute('href',href.replace(/^\.\//,''));}});
  if(menuBtn&&menu){menuBtn.addEventListener('click',()=>{const open=menu.classList.toggle('aberto');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰';});}
  const arts=window.MIRA_ARTICLES||[];
  const params=new URLSearchParams(location.search); const articleId=params.get('id');
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
  }
  const form=document.getElementById('form-busca'), input=document.getElementById('campo-busca'), results=document.getElementById('resultados-busca');
- if(form&&input&&results){form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim().toLocaleLowerCase('pt-BR');if(!q){results.hidden=true;return;}const found=arts.filter(a=>(a.title+' '+a.subtitle+' '+a.body.join(' ')).toLocaleLowerCase('pt-BR').includes(q));results.hidden=false;results.innerHTML='<h2>Resultados da pesquisa</h2>'+(found.length?found.map(a=>'<a href="artigo.html?id='+a.id+'"><strong>'+escapeHTML(a.title)+'</strong><br><small>'+escapeHTML(a.subtitle||a.category)+'</small></a>').join(''):'<p>Nenhuma matéria encontrada. Tente outra palavra.</p>');results.scrollIntoView({behavior:'smooth',block:'start'});});}
+ if(form&&input&&results){form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim().toLocaleLowerCase('pt-BR');if(!q){results.hidden=true;return;}const found=arts.filter(a=>(a.title+' '+a.subtitle+' '+a.body.join(' ')).toLocaleLowerCase('pt-BR').includes(q));results.hidden=false;results.innerHTML='<h2>Resultados da pesquisa</h2>'+(found.length?found.map(a=>'<a href="./artigo.html?id='+encodeURIComponent(a.id)+'"><strong>'+escapeHTML(a.title)+'</strong><br><small>'+escapeHTML(a.subtitle||a.category)+'</small></a>').join(''):'<p>Nenhuma matéria encontrada. Tente outra palavra.</p>');results.scrollIntoView({behavior:'smooth',block:'start'});});}
  function escapeHTML(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  function escapeAttr(s){return escapeHTML(s);}
 });
