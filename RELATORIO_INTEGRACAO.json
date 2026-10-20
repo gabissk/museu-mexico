@@ -1,45 +1,24 @@
 {
-  "articles": 35,
-  "image_records": 35,
-  "missing_image_ids": [],
-  "extra_image_ids": [],
-  "empty_body_ids": [],
-  "source_counts": {
-    "HIS-01": 3,
-    "HIS-02": 3,
-    "HIS-03": 3,
-    "HIS-04": 3,
-    "HIS-05": 3,
-    "HIS-06": 3,
-    "IND-01": 3,
-    "IND-02": 4,
-    "IND-03": 4,
-    "IND-04": 4,
-    "IND-05": 3,
-    "IND-06": 3,
-    "IND-07": 3,
-    "REL-01": 3,
-    "REL-02": 3,
-    "REL-03": 3,
-    "REL-04": 3,
-    "REL-05": 3,
-    "REL-06": 3,
-    "REL-07": 3,
-    "REL-08": 3,
-    "CUL-01": 3,
-    "CUL-02": 2,
-    "CUL-03": 3,
-    "CUL-04": 3,
-    "CUL-05": 3,
-    "CUL-06": 3,
-    "CUL-07": 3,
-    "SIM-01": 3,
-    "SIM-02": 3,
-    "SIM-03": 3,
-    "SIM-04": 3,
-    "SIM-05": 3,
-    "SIM-06": 3,
-    "SIM-07": 4
+  "editorial_articles": 37,
+  "unique_ids": 37,
+  "image_records": 37,
+  "matched_images": 37,
+  "category_counts": {
+    "historia": 6,
+    "povos-indigenas": 7,
+    "religiao": 6,
+    "cultura": 12,
+    "simbolos-patrimonio": 6
   },
-  "candidate_images": 35
+  "checks": {
+    "duplicate_ids": false,
+    "editorial_image_id_mismatch": false,
+    "content_source": "Museu_Mexico_Materias_Completas(1).zip",
+    "image_source": "Imagens_Museu_Mexico_37_materias_corrigido.md"
+  },
+  "notes": [
+    "Avisos genéricos de status de revisão foram removidos da interface.",
+    "Créditos e informações de licença do catálogo foram preservados.",
+    "Links remotos das imagens não puderam ser testados sem acesso à internet."
+  ]
 }
