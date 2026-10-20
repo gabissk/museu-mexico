@@ -1,0 +1,29 @@
+{
+  "article_count": 37,
+  "unique_ids": 37,
+  "empty_bodies": [],
+  "categories": {
+    "cultura": 12,
+    "historia": 6,
+    "povos-indigenas": 7,
+    "religiao": 6,
+    "simbolos-patrimonio": 6
+  },
+  "targeted_image_urls_corrected": [
+    "HIS-05",
+    "REL-04",
+    "CUL-01",
+    "CUL-05",
+    "CUL-06",
+    "CUL-10",
+    "SIM-01",
+    "SIM-02"
+  ],
+  "category_pages_dynamic": [
+    "historia.html",
+    "povos-indigenas.html",
+    "religiao.html",
+    "cultura.html",
+    "simbolos-patrimonio.html"
+  ]
+}

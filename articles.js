@@ -186,12 +186,12 @@ window.MIRA_ARTICLES = [
     "image": {
       "id": "HIS-05",
       "title": "A Revolução Mexicana e as reivindicações sociais",
-      "caption": "Fotografia de contexto da Revolução Mexicana.",
-      "page": "https://commons.wikimedia.org/wiki/File:Mexican_Revolution_(164",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mexican%20Revolution%20(164",
-      "credit": "Beinecke Library / Yale; autoria e data conforme Commons.",
-      "license": "A página indica domínio público nos EUA; como o projeto será publicado no Brasil, revisar a situação autoral antes de usar.",
-      "alt": "Fotografia de contexto da Revolução Mexicana."
+      "caption": "Fotografia/gravura histórica associada à Revolução Mexicana (1910–1917).",
+      "page": "https://commons.wikimedia.org/wiki/File:Mexican_Revolution_(320).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mexican_Revolution_%28320%29.jpg?width=1000",
+      "credit": "Commons; autor conforme a página do arquivo.",
+      "license": "A página do Commons indica domínio público nos EUA; manter a atribuição e conferir condições aplicáveis no Brasil.",
+      "alt": "Fotografia/gravura histórica associada à Revolução Mexicana (1910–1917)."
     }
   },
   {
@@ -946,8 +946,8 @@ window.MIRA_ARTICLES = [
       "id": "CUL-05",
       "title": "Artesanato mexicano e conhecimentos tradicionais",
       "caption": "Detalhe de tecelagem tradicional exposta em Oaxaca, relacionado a técnicas artesanais.",
-      "page": "https://commons.wikimedia.org/wiki/File:Detail_of_Indigenous_Weaving_-_Textile_Museum_-_Oaxaca_-_Mexico_-_08_(15176491097",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Detail%20of%20Indigenous%20Weaving%20-%20Textile%20Museum%20-%20Oaxaca%20-%20Mexico%20-%2008%20(15176491097",
+      "page": "https://commons.wikimedia.org/wiki/File:Detail_of_Indigenous_Weaving_-_Textile_Museum_-_Oaxaca_-_Mexico_-_08_(15176491097).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Detail%20of%20Indigenous%20Weaving%20-%20Textile%20Museum%20-%20Oaxaca%20-%20Mexico%20-%2008%20(15176491097).jpg?width=1000",
       "credit": "Adam Jones, 2014.",
       "license": "CC BY-SA 2.0, conforme a página do Commons.",
       "alt": "Detalhe de tecelagem tradicional exposta em Oaxaca, relacionado a técnicas artesanais."
@@ -1107,10 +1107,10 @@ window.MIRA_ARTICLES = [
       "id": "CUL-10",
       "title": "Culinária mexicana: sabores, história e identidade",
       "caption": "Tortillas mexicanas, alimento central em muitas tradições culinárias do país.",
-      "page": "https://commons.wikimedia.org/wiki/File:Tortillas_from_Mexico.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tortillas%20from%20Mexico.jpg?width=1000",
-      "credit": "Gerardolagunes",
-      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Mexican_tortilla.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mexican%20tortilla.jpg?width=1000",
+      "credit": "Conforme a página do arquivo no Wikimedia Commons.",
+      "license": "CC BY-SA 2.0, conforme a página do Commons.",
       "alt": "Tortillas mexicanas, alimento central em muitas tradições culinárias do país."
     }
   },
@@ -1202,7 +1202,7 @@ window.MIRA_ARTICLES = [
       "title": "A bandeira mexicana e seus significados",
       "caption": "Bandeira nacional do México.",
       "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mexico.svg",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Mexico.svg?width=1000",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Mexico.svg?width=1000",
       "credit": "Omar Alejandro Covarrubias Neri, 2006.",
       "license": "Domínio público indicado no Commons.",
       "alt": "Bandeira nacional do México."

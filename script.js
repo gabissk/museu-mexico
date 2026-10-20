@@ -2,6 +2,20 @@ document.addEventListener('DOMContentLoaded',()=>{
  const arts=window.MIRA_ARTICLES||[];
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const cats={'historia':['historia.html','História'],'povos-indigenas':['povos-indigenas.html','Povos Indígenas'],'religiao':['religiao.html','Religião'],'cultura':['cultura.html','Cultura'],'simbolos-patrimonio':['simbolos-patrimonio.html','Símbolos e Patrimônio']};
+ const catSection=document.querySelector('.pagina-categoria[data-category]');
+ if(catSection){
+   const key=catSection.dataset.category, grid=document.getElementById('grade-categoria'), count=document.getElementById('contador-categoria');
+   const list=arts.filter(a=>a.category===key);
+   if(count) count.textContent=list.length+' '+(list.length===1?'matéria nesta coleção':'matérias nesta coleção');
+   if(grid) grid.innerHTML=list.map(a=>'<a class="materia-card" href="artigo.html?id='+encodeURIComponent(a.id)+'"><span class="etiqueta">'+esc((cats[a.category]||['','Coleção'])[1])+' · '+esc(a.id)+'</span><h3>'+esc(a.title)+'</h3><p>'+esc(a.subtitle||'')+'</p><span class="ler">Ler matéria <b>→</b></span></a>').join('');
+ }
+ // Keep every existing homepage card aligned with the canonical article record for its ID.
+ document.querySelectorAll('a.materia-card[href*="artigo.html?id="]').forEach(card=>{
+   const id=new URL(card.href,location.href).searchParams.get('id'), a=arts.find(x=>x.id===id); if(!a)return;
+   const h=card.querySelector('h3'), p=card.querySelector('p'), tag=card.querySelector('.etiqueta');
+   if(h) h.textContent=a.title; if(p) p.textContent=a.subtitle||'';
+   if(tag) tag.textContent=((cats[a.category]||['','Coleção'])[1]);
+ });
  const menuBtn=document.querySelector('.menu-botao'), menu=document.querySelector('.menu');
  if(menuBtn&&menu){menuBtn.addEventListener('click',()=>{const open=menu.classList.toggle('aberto');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');menuBtn.textContent=open?'×':'☰';});}
  const renderMarkdown=md=>{
