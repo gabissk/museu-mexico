@@ -34,3 +34,23 @@ a.materia-card .imagem-card{max-width:100%;}
 .resultado-busca-link:hover,.resultado-busca-link:focus-visible{outline:2px solid #a98443;outline-offset:2px;}
 .resultado-busca-link span{display:block;margin-top:.35rem;font-size:.88rem;}
 @media(max-width:640px){.imagem-card{aspect-ratio:16/10;} .artigo-imagem{margin:1rem 0 1.5rem;} .artigo-imagem img{max-height:360px;} .artigo-imagem figcaption{font-size:.85rem;} }
+
+/* Ajuste opcional apenas para telas grandes: o breakpoint mobile (até 760px) fica intocado. */
+@media (min-width: 1001px) {
+  .topo {
+    padding-left: clamp(24px, 3vw, 52px);
+    padding-right: clamp(24px, 3vw, 52px);
+    gap: 32px;
+  }
+  .menu {
+    gap: clamp(12px, 1.5vw, 24px);
+  }
+  .menu a {
+    font-size: 11px;
+    letter-spacing: .5px;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 1200px) {
+  :root { --largura: 1280px; }
+}
