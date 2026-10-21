@@ -1,5 +1,23 @@
 document.addEventListener('DOMContentLoaded',()=>{
  const arts=window.MIRA_ARTICLES||[];
+ // Corrige a imagem da matéria CUL-08 no catálogo inteiro (cards de Cultura e página da matéria).
+ const literatura=arts.find(item=>item.id==='CUL-08');
+ if(literatura){literatura.image={
+   id:'CUL-08',
+   title:'Capa de A History of Mexican Literature',
+   caption:'Capa de A History of Mexican Literature, obra coletiva editada por Ignacio M. Sánchez Prado, Anna M. Nogar e José Ramón Ruisánchez Serra.',
+   page:'https://www.cambridge.org/core/books/a-history-of-mexican-literature/AD6518CC5B4DD000B445CA0EE73F2957',
+   url:'capa_A_History_of_Mexican_Literature.jpg',
+   credit:'Divulgação / Cambridge University Press',
+   license:'Capa editorial; direitos autorais da editora',
+   alt:'Capa do livro A History of Mexican Literature, publicado pela Cambridge University Press.'
+ };}
+ // Os códigos de matérias relacionadas ficam no catálogo interno; não aparecem no corpo do texto.
+ arts.forEach(item=>{
+   if(typeof item.bodyMarkdown==='string'){
+     item.bodyMarkdown=item.bodyMarkdown.replace(/\n*\s*Para continuar explorando\s*:[\s\S]*$/i,'').trim();
+   }
+ });
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const cats={'historia':['historia.html','História'],'povos-indigenas':['povos-indigenas.html','Povos Indígenas'],'religiao':['religiao.html','Religião'],'cultura':['cultura.html','Cultura'],'simbolos-patrimonio':['simbolos-patrimonio.html','Símbolos e Patrimônio']};
  const catSection=document.querySelector('.pagina-categoria[data-category]');
